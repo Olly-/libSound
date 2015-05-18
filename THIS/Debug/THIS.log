@@ -1,0 +1,19 @@
+﻿Build started 18/05/2015 07:07:41.
+     1>Project "C:\Users\Olly-PC\Documents\Visual Studio 2013\Projects\THIS\THIS\THIS.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D THIS_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\THIS.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt THIS.cpp
+         THIS.cpp
+     1>c:\users\olly-pc\documents\visual studio 2013\projects\this\this\this.cpp(38): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\olly-pc\documents\visual studio 2013\projects\this\this\this.cpp(53): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\olly-pc\documents\visual studio 2013\projects\this\this\this.cpp(54): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\olly-pc\documents\visual studio 2013\projects\this\this\this.cpp(125): warning C4552: '>>' : operator has no effect; expected operator with side-effect
+     1>c:\users\olly-pc\documents\visual studio 2013\projects\this\this\this.cpp(137): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\olly-pc\documents\visual studio 2013\projects\this\this\this.cpp(137): error C2146: syntax error : missing ';' before identifier 'Meter'
+     1>Done Building Project "C:\Users\Olly-PC\Documents\Visual Studio 2013\Projects\THIS\THIS\THIS.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.02
