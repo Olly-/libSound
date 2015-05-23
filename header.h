@@ -8,9 +8,9 @@ extern HMODULE module;
 
 static const char* PascalExports[] =
 {
-	"TSoundReader_Init", "function TSoundReader.Init(PID: DWord): Boolean;",
+	"TSoundReader_Init", "function TSoundReader.Init(PID: DWord; Window: DWord): Boolean;",
 	"TSoundReader_GetPeak", "function TSoundReader.GetPeak(): Integer;",
-	"TSoundReader_WaitForPeak", "function TSoundReader.WaitForPeak(MinValue: Integer; WaitFor: Integer): Boolean;",
+	"TSoundReader_WaitForPeak", "function TSoundReader.WaitForPeak(MinPeakValue: Integer; WaitFor: Integer): Boolean;",
 	"TSoundReader_Free", "procedure TSoundReader.Free();"
 };
 
@@ -41,7 +41,7 @@ extern "C"
 	DLL_FUNC int GetTypeCount();
 	DLL_FUNC int GetTypeInfo(int Index, char** Type, char** Definition);
 
-	DLL_FUNC bool TSoundReader_Init(TSoundReader* &ptr, DWORD PID);
+	DLL_FUNC bool TSoundReader_Init(TSoundReader* &ptr, DWORD PID, DWORD Window);
 	DLL_FUNC int TSoundReader_GetPeak(TSoundReader* &ptr);
 	DLL_FUNC bool TSoundReader_WaitForPeak(TSoundReader* &ptr, int MinValue, int WaitFor);
 	DLL_FUNC void TSoundReader_Free(TSoundReader* &ptr);

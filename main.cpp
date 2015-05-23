@@ -134,12 +134,26 @@ bool TSoundReader::WaitForPeak(int MinValue, int WaitFor) {
 	return false;
 }
 
-bool TSoundReader_Init(TSoundReader* &ptr, DWORD PID)
+bool TSoundReader_Init(TSoundReader* &ptr, DWORD PID, DWORD Window)
 {
 	try
 	{
-		ptr = new TSoundReader(PID);
-		return true;
+		DWORD p = 0;
+		if (PID > 0) {
+			p = PID;
+		} 
+		else {
+			GetWindowThreadProcessId((HWND)Window, &p);
+		}
+
+		if (p > 0) {
+			ptr = new TSoundReader(p);
+			return true;
+		}
+		else {
+			std::cout << "Failed to attempt to initialize TSoundReader: Invaild params PID = " << PID << "Window = " << Window << "\n";
+			return false;
+		}
 	}
 	catch (std::runtime_error e)
 	{
